@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rincón del Libro</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .header-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #f8fafc;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+        .badge {
+            display: inline-block;
+            margin-top: 0.75rem;
+            background-color: #1e293b;
+            color: #38bdf8;
+            border: 1px solid #334155;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            max-width: 860px;
+            width: 100%;
+        }
+        .book-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .book-card:hover {
+            transform: translateY(-4px);
+            border-color: #64748b;
+        }
+        .cover {
+            height: 140px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .cover-1 { background: linear-gradient(135deg, #f59e0b, #b45309); }
+        .cover-2 { background: linear-gradient(135deg, #06b6d4, #0e7490); }
+        .cover-3 { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+
+        .book-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.35rem;
+            color: #f8fafc;
+        }
+        .author {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-bottom: 0.75rem;
+        }
+        .desc {
+            font-size: 0.875rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        .tag {
+            align-self: flex-start;
+            font-size: 0.75rem;
+            background-color: #334155;
+            color: #e2e8f0;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+        }
+        footer {
+            margin-top: 3rem;
+            color: #64748b;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-icon">📚</div>
+        <h1>Rincón del Libro</h1>
+        <p>Una pequeña colección de lecturas recomendadas.</p>
+        <span class="badge">☸️ Corriendo en Kubernetes</span>
+    </header>
+
+    <main class="grid">
+        <article class="book-card">
+            <div class="cover cover-1">📖</div>
+            <div>
+                <h3>Cien años de soledad</h3>
+                <div class="author">Gabriel García Márquez</div>
+                <p class="desc">La historia de la familia Buendía a lo largo de siete generaciones en el mítico pueblo de Macondo.</p>
+            </div>
+            <span class="tag">Realismo Mágico</span>
+        </article>
+
+        <article class="book-card">
+            <div class="cover cover-2">🚀</div>
+            <div>
+                <h3>Dune</h3>
+                <div class="author">Frank Herbert</div>
+                <p class="desc">Una obra cumbre de la ciencia ficción en el planeta desértico Arrakis, fuente de la especia.</p>
+            </div>
+            <span class="tag">Ciencia Ficción</span>
+        </article>
+
+        <article class="book-card">
+            <div class="cover cover-3">🪐</div>
+            <div>
+                <h3>El Principito</h3>
+                <div class="author">Antoine de Saint-Exupéry</div>
+                <p class="desc">Un viaje poético y filosófico sobre la amistad, el amor y la naturaleza humana.</p>
+            </div>
+            <span class="tag">Clásico</span>
+        </article>
+    </main>
+
+    <footer>
+        <p>Página estática ligera para pruebas con Docker & Kubernetes</p>
+    </footer>
+</body>
+</html>
